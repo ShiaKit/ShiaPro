@@ -1,18 +1,14 @@
 import React from 'react';
 import {
-  Image,
-  Platform,
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
+  TouchableHighlight
 } from 'react-native';
-import { WebBrowser, Icon } from 'expo';
+import { Icon } from 'expo';
 
-import { MonoText } from '../components/StyledText';
-import TabBarIcon from '../components/TabBarIcon';
-import SlantedHeader from '../components/SlantedHeader';
+import PageHeader from "../components/PageHeader";
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -22,12 +18,14 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
         <View style={styles.container}>
-          <SlantedHeader height={300}>
+          <PageHeader height={300} colors={['#4A4969', '#7072AB', '#CD82A0']}>
             <View style={styles.header}>
               <Text style={styles.headerText}>Salaams, Faizaan.</Text>
-              <Icon.Ionicons name='md-settings' style={styles.settingsIcon}></Icon.Ionicons>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Settings')} style={{marginLeft: 'auto'}}>
+                <Icon.Ionicons name='md-settings' style={styles.settingsIcon}></Icon.Ionicons>
+              </TouchableHighlight>
             </View>
-          </SlantedHeader>
+          </PageHeader>
           <ScrollView style={styles.content}>
             <Text>Here's some test content.</Text>
           </ScrollView>

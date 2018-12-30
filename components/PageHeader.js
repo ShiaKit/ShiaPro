@@ -5,11 +5,11 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo';
 
-export default class SlantedHeader extends React.Component {
+export default class PageHeader extends React.Component {
   render() {
     return (
        <LinearGradient
-          colors={['#4A4969', '#7072AB', '#CD82A0']}
+          colors={this.props.colors}
           style={styles.headerContainer} 
           height={this.props.height}>
           {this.props.children}

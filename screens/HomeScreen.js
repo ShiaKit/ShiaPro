@@ -4,12 +4,12 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  View,
-  TouchableHighlight
+  View
 } from 'react-native';
 import { Icon } from 'expo';
 
 import PageHeader from "../components/PageHeader";
+import IconButton from '../components/IconButton';
 import VerseDay from '../components/VerseDay';
 import DailyRecitation from '../components/DailyRecitation';
 
@@ -29,9 +29,9 @@ export default class HomeScreen extends React.Component {
           <PageHeader height={300} colors={['#4A4969', '#7072AB', '#CD82A0']}>
             <View style={styles.header}>
               <Text style={styles.headerText}>Salaams, Faizaan.</Text>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Settings')} style={{marginLeft: 'auto'}} hitSlop={{top: 20, bottom: 20, left: 50, right: 50}}>
+              <IconButton onPress={() => this.props.navigation.navigate('Settings')} style={{marginLeft: 'auto'}}>
                 <Icon.Ionicons name='md-settings' style={styles.settingsIcon}></Icon.Ionicons>
-              </TouchableHighlight>
+              </IconButton>
             </View>
           </PageHeader>
           <ScrollView style={styles.content}>

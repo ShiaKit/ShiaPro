@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableHighlight } from 'react-native';
+import { View, Text } from 'react-native';
 import { Icon } from 'expo';
 import styled from 'styled-components/native';
 
 import Card from './Card';
 import Title from './Title';
+import IconButton from './IconButton';
 
 export default class VerseDay extends React.Component {
 
@@ -14,9 +15,9 @@ export default class VerseDay extends React.Component {
                 {/* Title area */}
                 <View style={{flexDirection: 'row'}}>
                     <Title style={{justifyContent: 'flex-start'}}>Verse of the Day</Title>         
-                    <TouchableHighlight onPress={() => this.props.navigation.navigate('Settings')} style={{marginLeft: 'auto'}} hitSlop={{top: 20, bottom: 20, left: 50, right: 50}}>
+                    <IconButton onPress={() => this.props.navigation.navigate('Settings')} style={{marginLeft: 'auto'}}>
                         <Icon.Ionicons name='md-share' style={{fontSize: 24, color: '#9B51E0'}}></Icon.Ionicons>
-                    </TouchableHighlight>
+                    </IconButton>
                 </View>
 
                 {/* Content area */}

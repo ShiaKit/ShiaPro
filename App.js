@@ -33,7 +33,10 @@ export default class App extends React.Component {
       ]),
       Font.loadAsync({
         ...Icon.Ionicons.font,
-        'Raleway': require('./assets/fonts/Raleway-Medium.ttf')
+        'Raleway': require('./assets/fonts/Raleway-Medium.ttf'),
+        'Nunito': require('./assets/fonts/Nunito-Regular.ttf'),
+        'Montserrat': require('./assets/fonts/Montserrat-Regular.ttf'),
+        'Oswald': require('./assets/fonts/Oswald-Regular.ttf'),
       }),
     ]);
   };

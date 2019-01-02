@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components/native'
 import {
   ScrollView,
   StyleSheet,
@@ -9,6 +10,13 @@ import {
 import { Icon } from 'expo';
 
 import PageHeader from "../components/PageHeader";
+import Card from "../components/Card";
+import Title from "../components/Title";
+
+const WrapperView = styled.View`
+  flex: 1;
+  backgroundColor: #e5e5e5;
+`
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -17,7 +25,7 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-        <View style={styles.container}>
+        <WrapperView>
           <PageHeader height={300} colors={['#4A4969', '#7072AB', '#CD82A0']}>
             <View style={styles.header}>
               <Text style={styles.headerText}>Salaams, Faizaan.</Text>
@@ -27,18 +35,17 @@ export default class HomeScreen extends React.Component {
             </View>
           </PageHeader>
           <ScrollView style={styles.content}>
-            <Text>Here's some test content.</Text>
+            <Card>
+              <Title>Verse of the Day</Title>
+              <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit lacus maximus consectetur aliquam. Aenean efficitur, nibh scelerisque semper suscipit, lacus eros aliquet diam, nec commodo enim nulla id sapien. Praesent non libero sit amet ante commodo ornare. </Text>
+            </Card>
           </ScrollView>
-        </View>
+        </WrapperView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
   content: {
     marginTop: 10
   },

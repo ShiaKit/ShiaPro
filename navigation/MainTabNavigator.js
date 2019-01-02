@@ -1,6 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import Colors from '../constants/Colors';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
@@ -18,11 +19,7 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      name={'md-home'}
     />
   ),
 };
@@ -89,4 +86,10 @@ export default createBottomTabNavigator({
   QuranStack,
   RecitationsStack,
   CommunityStack
+}, {
+  tabBarOptions: {
+    style: {
+      backgroundColor: Colors.tabBar
+    }
+  }
 });

@@ -10,8 +10,8 @@ import {
 import { Icon } from 'expo';
 
 import PageHeader from "../components/PageHeader";
-import Card from "../components/Card";
-import Title from "../components/Title";
+import VerseDay from '../components/VerseDay';
+import DailyRecitation from '../components/DailyRecitation';
 
 const WrapperView = styled.View`
   flex: 1;
@@ -29,16 +29,14 @@ export default class HomeScreen extends React.Component {
           <PageHeader height={300} colors={['#4A4969', '#7072AB', '#CD82A0']}>
             <View style={styles.header}>
               <Text style={styles.headerText}>Salaams, Faizaan.</Text>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Settings')} style={{marginLeft: 'auto'}}>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Settings')} style={{marginLeft: 'auto'}} hitSlop={{top: 20, bottom: 20, left: 50, right: 50}}>
                 <Icon.Ionicons name='md-settings' style={styles.settingsIcon}></Icon.Ionicons>
               </TouchableHighlight>
             </View>
           </PageHeader>
           <ScrollView style={styles.content}>
-            <Card>
-              <Title>Verse of the Day</Title>
-              <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit lacus maximus consectetur aliquam. Aenean efficitur, nibh scelerisque semper suscipit, lacus eros aliquet diam, nec commodo enim nulla id sapien. Praesent non libero sit amet ante commodo ornare. </Text>
-            </Card>
+            <VerseDay/>
+            <DailyRecitation/>
           </ScrollView>
         </WrapperView>
     );

@@ -3,12 +3,12 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import Colors from '../constants/Colors';
 
-import TabBarIcon from '../components/TabBarIcon';
+import TabBarIcon from '../components/common/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import CalendarScreen from '../screens/CalendarScreen';
-import QuranScreen from '../screens/QuranScreen';
-import RecitationsScreen from '../screens/RecitationsScreen';
-import CommunityScreen from '../screens/CommunityScreen';
+import CalendarScreen from '../screens/calendar/CalendarScreen';
+import QuranScreen from '../screens/quran/QuranScreen';
+import RecitationsScreen from '../screens/recitations/RecitationsScreen';
+import CommunityScreen from '../screens/community/CommunityScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,

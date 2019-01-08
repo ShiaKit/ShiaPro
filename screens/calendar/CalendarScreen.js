@@ -1,14 +1,14 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Icon } from 'expo';
-import PageHeader from '../components/PageHeader';
+import PageHeader from '../../components/common/PageHeader';
+import CalendarHeading from '../../components/calendar/CalendarHeading';
 
 /*
 This page will include a calendar with upcoming Islamic events,
 as well as an Islamic birthday feature and link to the prayer timings listing (that's also
 accessible on the main homepage).
 */
-export default class QuranScreen extends React.Component {
+export default class CalendarScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -17,8 +17,8 @@ export default class QuranScreen extends React.Component {
     return (
       <View style={styles.container}>
         <PageHeader height={200} colors={['#9B51E0', '#BB6BD9']}>
-          <View style={styles.header}>
-            <Text>Qur'an page.</Text>
+          <View style={{paddingTop: 60}}>
+            <CalendarHeading></CalendarHeading>
           </View>
         </PageHeader>
         <ScrollView style={styles.content}>
@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
   header: {
     paddingTop: 60,
     marginLeft: 20,
-    marginRight: 20,
-    flexDirection: 'row'
+    marginRight: 20
   }
 });

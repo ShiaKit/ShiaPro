@@ -1,7 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Icon } from 'expo';
-import PageHeader from '../components/PageHeader';
+import PageHeader from '../../components/common/PageHeader';
 
 /*
 This page will include a calendar with upcoming Islamic events,

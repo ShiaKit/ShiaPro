@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { Icon } from 'expo';
-import styled from 'styled-components/native';
 
-import Card from './Card';
-import Title from './Title';
-import IconButton from './IconButton';
+import Card from '../common/Card';
+import Title from '../common/Title';
+import IconButton from '../common/IconButton';
 
 export default class VerseDay extends React.Component {
 

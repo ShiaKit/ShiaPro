@@ -1,8 +1,4 @@
 import React from 'react';
-import {
-  View,
-  Text,
-} from 'react-native';
 import { LinearGradient } from 'expo';
 
 export default class PageHeader extends React.Component {

@@ -1,13 +1,13 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Icon } from 'expo';
-import PageHeader from '../components/PageHeader';
+import PageHeader from '../../components/common/PageHeader';
 
 /*
-This page will include links to du'as, a'amaals, and salaats along with interactives.
-TODO Debating whether to put Qur'an within here... idk
+This page will include a calendar with upcoming Islamic events,
+as well as an Islamic birthday feature and link to the prayer timings listing (that's also
+accessible on the main homepage).
 */
-export default class RecitationsScreen extends React.Component {
+export default class QuranScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -17,7 +17,7 @@ export default class RecitationsScreen extends React.Component {
       <View style={styles.container}>
         <PageHeader height={200} colors={['#9B51E0', '#BB6BD9']}>
           <View style={styles.header}>
-            <Text>Recitations page.</Text>
+            <Text>Qur'an page.</Text>
           </View>
         </PageHeader>
         <ScrollView style={styles.content}>

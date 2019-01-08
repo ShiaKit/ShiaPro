@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import Title from './Title';
-import Card from './Card';
+import Title from '../common/Title';
+import Card from '../common/Card';
 
 export default class DailyRecitation extends React.Component {
 

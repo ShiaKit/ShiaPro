@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components/native'
 import {
   ScrollView,
   StyleSheet,
@@ -8,16 +7,11 @@ import {
 } from 'react-native';
 import { Icon } from 'expo';
 
-import PageHeader from "../components/PageHeader";
-import IconButton from '../components/IconButton';
-import VerseDay from '../components/VerseDay';
-import DailyRecitation from '../components/DailyRecitation';
-import UntilNextAdhan from '../components/UntilNextAdhan';
-
-const WrapperView = styled.View`
-  flex: 1;
-  backgroundColor: #e5e5e5;
-`
+import PageHeader from "../components/common/PageHeader";
+import IconButton from '../components/common/IconButton';
+import VerseDay from '../components/home/VerseDay';
+import DailyRecitation from '../components/home/DailyRecitation';
+import UntilNextAdhan from '../components/home/UntilNextAdhan';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -26,7 +20,7 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-        <WrapperView>
+        <View style={styles.wrapper}>
           <PageHeader height={275} colors={['#4A4969', '#7072AB', '#CD82A0']}>
             <View style={styles.header}>
               <Text style={styles.headerText}>Salaams, Faizaan.</Text>
@@ -40,12 +34,16 @@ export default class HomeScreen extends React.Component {
             <VerseDay/>
             <DailyRecitation/>
           </ScrollView>
-        </WrapperView>
+        </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    backgroundColor: '#e5e5e5'
+  },
   content: {
     marginTop: 10,
   },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinearGradient } from 'expo';
+import { View, LinearGradient } from 'expo';
 
 export default class PageHeader extends React.Component {
   render() {
@@ -8,7 +8,7 @@ export default class PageHeader extends React.Component {
           colors={this.props.colors}
           style={styles.headerContainer} 
           height={this.props.height}>
-          {this.props.children}
+            {this.props.children}
         </LinearGradient>
      );
   }

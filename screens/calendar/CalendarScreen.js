@@ -17,9 +17,7 @@ export default class CalendarScreen extends React.Component {
     return (
       <View style={styles.container}>
         <PageHeader height={200} colors={['#9B51E0', '#BB6BD9']}>
-          <View style={{paddingTop: 60}}>
-            <CalendarHeading></CalendarHeading>
-          </View>
+          <CalendarHeading></CalendarHeading>
         </PageHeader>
         <ScrollView style={styles.content}>
           <Text>This is a dummy page, awaiting real contents.</Text>

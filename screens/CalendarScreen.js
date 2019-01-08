@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Icon } from 'expo';
 import PageHeader from '../components/PageHeader';
+import CalendarHeading from '../components/CalendarHeading';
 
 /*
 This page will include a calendar with upcoming Islamic events,
@@ -17,8 +18,8 @@ export default class CalendarScreen extends React.Component {
     return (
       <View style={styles.container}>
         <PageHeader height={200} colors={['#9B51E0', '#BB6BD9']}>
-          <View style={styles.header}>
-            <Text>Calendar page.</Text>
+          <View style={{paddingTop: 60}}>
+            <CalendarHeading></CalendarHeading>
           </View>
         </PageHeader>
         <ScrollView style={styles.content}>
@@ -40,7 +41,6 @@ const styles = StyleSheet.create({
   header: {
     paddingTop: 60,
     marginLeft: 20,
-    marginRight: 20,
-    flexDirection: 'row'
+    marginRight: 20
   }
 });

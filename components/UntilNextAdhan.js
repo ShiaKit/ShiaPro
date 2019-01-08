@@ -3,16 +3,6 @@ import { Text, StyleSheet } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import { Icon } from 'expo';
 
-import styled from 'styled-components/native';
-
-const MainView = styled.View`
-    margin: 20px;
-    border-radius: 5px;
-    background: rgba(74, 73, 105, 0.5);
-`;
-
-// Animatable.Text animation="fadeIn" iterationCount={"infinite"} direction="alternate" delay={2000}
-
 export default class UntilNextAdhan extends React.Component {
     render() {
         return(
@@ -35,7 +25,7 @@ export default class UntilNextAdhan extends React.Component {
 const styles = StyleSheet.create({
     timeText: {
         fontSize: 48,
-        fontFamily: 'Oswald',
+        fontFamily: 'oswald',
         textAlign: 'center',
         color: 'white'
     },
@@ -43,7 +33,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         textAlign: 'center',
         color: 'white',
-        fontFamily: 'Montserrat',
+        fontFamily: 'montserrat',
         textTransform: 'uppercase'
     },
     navIcon: {
@@ -55,7 +45,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         textAlign: 'center',
         color: '#9B51E0',
-        fontFamily: 'Montserrat',
+        fontFamily: 'montserrat',
         textTransform: 'uppercase'
     }
 });

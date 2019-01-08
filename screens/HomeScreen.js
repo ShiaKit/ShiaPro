@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontSize: 20,
-    fontFamily: 'Nunito',
+    fontFamily: 'nunito',
     color: '#fff',
     justifyContent: 'flex-start'
   },
